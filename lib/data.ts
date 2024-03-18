@@ -43,7 +43,7 @@ const data = {
 			// banner: '/images/banner3.jpg',
 		},
 		{
-			name: "Golf pants",
+			name: "Golf Pants",
 			slug: "golf-pants",
 			category: "Pants",
 			image: "/images/pants1.jpg",
@@ -57,7 +57,7 @@ const data = {
 			// banner: '/images/banner4.jpg',
 		},
 		{
-			name: "Fit pants",
+			name: "Fit Pants",
 			slug: "fit-pants",
 			category: "Pants",
 			image: "/images/pants2.jpg",
@@ -71,7 +71,7 @@ const data = {
 			// banner: '/images/banner4.jpg',
 		},
 		{
-			name: "Classic pants",
+			name: "Classic Pants",
 			slug: "classic-pants",
 			category: "Shirts",
 			image: "/images/pants3.jpg",
