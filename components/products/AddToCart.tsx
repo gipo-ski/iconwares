@@ -8,7 +8,7 @@ import useCartService from "@/lib/hooks/useCartStore";
 
 export default function AddToCart({ item }: { item: OrderItem }) {
 	const router = useRouter();
-	const { items, increase } = useCartService();
+	const { items, increase, decrease } = useCartService();
 	const [existItem, setExistItem] = useState<OrderItem | undefined>();
 
 	useEffect(() => {
@@ -23,6 +23,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
 			<button
 				className='btn'
 				type='button'
+				onClick={() => decrease(existItem)}
 			>
 				-
 			</button>
