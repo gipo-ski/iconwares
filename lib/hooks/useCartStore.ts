@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 import { round2 } from "../utils";
-import { OrderItem } from "../models/OrderModel";
+import { OrderItem, ShippingAddress } from "../models/OrderModel";
 
 type Cart = {
 	items: OrderItem[];
@@ -10,6 +10,8 @@ type Cart = {
 	taxPrice: number;
 	shippingPrice: number;
 	totalPrice: number;
+	paymentMethod: string;
+	shippingAddress: ShippingAddress;
 };
 
 const initialState: Cart = {
@@ -18,6 +20,14 @@ const initialState: Cart = {
 	taxPrice: 0,
 	shippingPrice: 0,
 	totalPrice: 0,
+	paymentMethod: "PayPal",
+	shippingAddress: {
+		fullName: "",
+		address: "",
+		city: "",
+		postalCode: "",
+		country: "",
+	},
 };
 
 //use local storage to persistently hold the cart items in the cart even after page refresh
@@ -75,6 +85,8 @@ export default function useCartService() {
 				totalPrice,
 			});
 		},
+		
+		init: () => cartStore.setState(initialState),
 	};
 }
 

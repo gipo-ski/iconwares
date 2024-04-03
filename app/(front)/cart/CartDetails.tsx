@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-import useCartService, { cartStore } from "@/lib/hooks/useCartStore";
+import useCartService from "@/lib/hooks/useCartStore";
 
 export default function CartDetails() {
 	const router = useRouter();

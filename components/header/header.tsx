@@ -10,7 +10,7 @@ const Header = () => {
 						href='/'
 						className='btn btn-ghost text-lg'
 					>
-						IconWares of GIPOSKI
+						iconwears by GIPOSKI
 					</Link>
 					<Menu />
 				</div>
